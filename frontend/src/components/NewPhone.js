@@ -3,6 +3,7 @@ import { useState } from 'react';
 function NewPhone(props) {
     const {contact, phones, setPhones} = props;
     const [number, setNumber] = useState('');
+    const [name, setName] = useState('');
     const [category, setCategory] = useState('');
 
     async function createPhone(e) {
