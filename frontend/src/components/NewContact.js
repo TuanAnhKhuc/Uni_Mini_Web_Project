@@ -14,7 +14,8 @@ function NewContact(props) {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                name
+                name,
+                address
             })
         });
 
