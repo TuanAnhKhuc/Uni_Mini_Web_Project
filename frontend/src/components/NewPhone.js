@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 function NewPhone(props) {
     const {contact, phones, setPhones} = props;
-    const [number, setNumber] = useState('');
+    const [phone_number, setPhoneNumber] = useState('');
     const [name, setName] = useState('');
     const [category, setCategory] = useState('');
 
@@ -15,8 +15,8 @@ function NewPhone(props) {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                number,
-                name: category
+                phone_number,
+                phone_type: category
             })
         });
 
@@ -26,8 +26,8 @@ function NewPhone(props) {
             setPhones([...phones, data]);
         }
 
-        setNumber('');
-        setName('');
+        setPhoneNumber('');
+        setCategory('');
     }
 
 	return (
@@ -39,7 +39,7 @@ function NewPhone(props) {
                 <option value="Work" >Work</option>
                 <option value="Other">Other</option>
             </select>
-            <input type='text' placeholder='Phone Number' onChange={(e) => setNumber(e.target.value)} value={number}/>
+            <input type='text' placeholder='Phone Number' onChange={(e) => setPhoneNumber(e.target.value)} value={phone_number}/>
             <button className='button green' type='submit'>Add {props.contact.name}'s phone </button>
         </form>
 	);
