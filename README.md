@@ -47,9 +47,36 @@ Task 2: API Commands
    ![Alt text](<<img width="975" alt="Task 2 8 2" src="https://github.com/user-attachments/assets/4da0175b-09a3-4a0b-ac0e-9c06cd152e2e">>)
 
    
-Task 3: UI changes 
+Task 3: Data model changes & UI alterations.
+UI changes:
 
 <img width="461" alt="Task 3 UI" src="https://github.com/user-attachments/assets/675dbac6-0ddf-4321-8be7-0ded719e1147">
+
+Code changes:
+
+![Task 3 Contact address attri](https://github.com/user-attachments/assets/deffbc2e-db40-4e5c-84ab-e9254c6619d3)
+
+![Task 3 Phone atri](https://github.com/user-attachments/assets/d3985eb6-6a33-4127-b2d1-f1ddba165fb3)
+
+![Task 3 model changes](https://github.com/user-attachments/assets/57c7b1ed-a532-4686-b411-cc862f78c336)
+
+![Task 3 phone controller](https://github.com/user-attachments/assets/8a832a41-3478-4e06-80cf-bd678c3aeccc)
+
+![Task 3 Contact controller](https://github.com/user-attachments/assets/736766db-85d1-4c2e-98d5-f9d71b6ad012)
+
+![Task 3 new contact frontend](https://github.com/user-attachments/assets/3948ae3a-a814-459b-a69b-1a23b528c3e7)
+
+![Task 3 contact frontend](https://github.com/user-attachments/assets/d72d8904-f433-4338-9b3d-b7b685111950)
+
+![Task 3 frontend Phone ](https://github.com/user-attachments/assets/1c749477-a089-453b-aa94-8862b846605a)
+
+![Task 3 NewPhone frnt end part1](https://github.com/user-attachments/assets/f3c8d4f2-bd8b-488d-a0ba-99713bf7e396)
+
+![Task 3 frontend NewPhone part 3](https://github.com/user-attachments/assets/bc53929d-94f8-4b8c-bf00-b7e5526bff1f)
+
+![Task 3 frontend NewPhone part 2](https://github.com/user-attachments/assets/31b7ed00-8113-498b-ad00-23c36aa5e352)
+
+
 
 Task 3: API command
 
