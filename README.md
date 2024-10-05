@@ -2,7 +2,7 @@ Tuan Anh Github repo link: https://github.com/TuanAnhKhuc/A2-Tuan-Anh-21794174.g
 
 Task 1: User Interface changes
 
-![] (<<img width="540" alt="Original Contact web UI  2" src="https://github.com/user-attachments/assets/39ecb08f-f9b3-4c80-a6e1-959248d87795">>)
+<img width="540" alt="Original Contact web UI  2" src="https://github.com/user-attachments/assets/572f599c-7673-4664-92d9-b32046d275cb">
 
 Task 2: API Commands
 1. Show the API command for “Show Contact” and provide a screenshot of the output (1 Mark)
@@ -36,6 +36,11 @@ Task 2: API Commands
 8. Show the API command for “Update Phone” and provide a screenshot of the output (1 Marks)
 
    ![Alt text](<<img width="975" alt="Task 2 8 2" src="https://github.com/user-attachments/assets/4da0175b-09a3-4a0b-ac0e-9c06cd152e2e">>)
+
+   
+Task 3: UI changes 
+
+<img width="461" alt="Task 3 UI" src="https://github.com/user-attachments/assets/675dbac6-0ddf-4321-8be7-0ded719e1147">
 
 Task 3: API command
 
