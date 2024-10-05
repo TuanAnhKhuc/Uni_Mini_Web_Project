@@ -49,8 +49,8 @@ Task 1: User Interface changes
 
 </details>
 
-   
-Task 3: Data model changes & UI alterations.
+<details>
+  <summary>Task 3: Data model changes & UI alterations. </summary>
 UI changes:
 
 <img width="461" alt="Task 3 UI" src="https://github.com/user-attachments/assets/675dbac6-0ddf-4321-8be7-0ded719e1147">
@@ -79,9 +79,10 @@ Code changes:
 
 ![Task 3 frontend NewPhone part 2](https://github.com/user-attachments/assets/31b7ed00-8113-498b-ad00-23c36aa5e352)
 
+</details>
 
-
-Task 3: API command
+<details>
+<summary> Task 3: API command </summary>
 
 1. Show contact
    
@@ -115,7 +116,7 @@ Task 3: API command
 
 ![Update phone](https://github.com/user-attachments/assets/97eeff1a-135c-4b31-8e06-d2acf904a3dd)
 
-
+</details>
 
 
 
