@@ -39,12 +39,19 @@ Task 2: API Commands
 
 Task 3: API command
 1.![Show Contact](https://github.com/user-attachments/assets/d1bc2b13-cf24-4004-a5c6-06db9b398dbe)
+
 2.![Add Contact](https://github.com/user-attachments/assets/5c79cdfd-697a-4e95-89f8-5e6449d6f7ea)
+
 3.![Delete Contact](https://github.com/user-attachments/assets/57b5ed51-5487-4ac3-abb7-9246face83e1)
+
 4.![Update contact](https://github.com/user-attachments/assets/59efc25f-ea56-4c2a-ab3d-dc4122c08b45)
+
 5.![Show phone](https://github.com/user-attachments/assets/10ec90be-b69c-4c99-9c69-e666220dd79a)
+
 6.![Add phone](https://github.com/user-attachments/assets/de6e2c94-3cf6-4b61-ba00-d4d9bc5429a2)
+
 7.![Delete phone](https://github.com/user-attachments/assets/39334e62-9315-46ca-ab91-9654ac63a87a)
+
 8.![Update phone](https://github.com/user-attachments/assets/97eeff1a-135c-4b31-8e06-d2acf904a3dd)
 
 
