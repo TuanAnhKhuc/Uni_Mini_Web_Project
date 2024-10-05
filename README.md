@@ -38,6 +38,27 @@ Task 2: API Commands
    ![Alt text](<<img width="975" alt="Task 2 8 2" src="https://github.com/user-attachments/assets/4da0175b-09a3-4a0b-ac0e-9c06cd152e2e">>)
 
 Task 3: API command
-1. ![Task 3 1 2](https://github.com/user-attachments/assets/d1bc2b13-cf24-4004-a5c6-06db9b398dbe)
+1.
+   ![Task 3 1 2](https://github.com/user-attachments/assets/d1bc2b13-cf24-4004-a5c6-06db9b398dbe)
+2.
+   ![Task3 2 2](https://github.com/user-attachments/assets/5c79cdfd-697a-4e95-89f8-5e6449d6f7ea)
+3.
+   ![Task 3 3 2](https://github.com/user-attachments/assets/57b5ed51-5487-4ac3-abb7-9246face83e1)
+4.
+   ![Task 3 4 2](https://github.com/user-attachments/assets/59efc25f-ea56-4c2a-ab3d-dc4122c08b45)
+5.
+   ![Task 3 5 2](https://github.com/user-attachments/assets/10ec90be-b69c-4c99-9c69-e666220dd79a)
+6.
+   ![Task 3 6 2](https://github.com/user-attachments/assets/de6e2c94-3cf6-4b61-ba00-d4d9bc5429a2)
+7.
+   ![Task 3 7 2](https://github.com/user-attachments/assets/39334e62-9315-46ca-ab91-9654ac63a87a)
+8.
+   ![Task 3 8 2](https://github.com/user-attachments/assets/97eeff1a-135c-4b31-8e06-d2acf904a3dd)
+
+
+
+
+
+
 
 
