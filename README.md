@@ -1,7 +1,8 @@
 Tuan Anh Github repo link: https://github.com/TuanAnhKhuc/A2-Tuan-Anh-21794174.git
-
-Task 1: User Interface changes
-
+<details>
+<summary>Task 1: User Interface changes </summary>
+Original UI:
+  
 <img width="540" alt="Original Contact web UI  2" src="https://github.com/user-attachments/assets/572f599c-7673-4664-92d9-b32046d275cb">
 
 ![Task1 1](https://github.com/user-attachments/assets/d77e0d68-41ff-49dd-a45d-126971f5159d)
@@ -12,6 +13,11 @@ Task 1: User Interface changes
 
 ![Task 1 3](https://github.com/user-attachments/assets/f03cf686-50bf-4127-a910-8d1eeb0c8624)
 
+Task 1 UI changes:
+
+<img width="484" alt="Tasask 1 UI changes" src="https://github.com/user-attachments/assets/7bbbd896-d6fe-4c0e-b82c-df4b701775b7">
+
+</details>
 
 <details>
   <summary>Task 2: API Commands and Screenshots</summary>
