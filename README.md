@@ -13,7 +13,8 @@ Task 1: User Interface changes
 ![Task 1 3](https://github.com/user-attachments/assets/f03cf686-50bf-4127-a910-8d1eeb0c8624)
 
 
-Task 2: API Commands
+<details>
+  <summary>Task 2: API Commands and Screenshots</summary>
 1. Show the API command for “Show Contact” and provide a screenshot of the output (1 Mark)
 
    ![](<<img width="967" alt="Task 2 1 2" src="https://github.com/user-attachments/assets/96bf5aa8-4421-4bda-a895-425af18ab2bf">>)
@@ -45,6 +46,8 @@ Task 2: API Commands
 8. Show the API command for “Update Phone” and provide a screenshot of the output (1 Marks)
 
    ![Alt text](<<img width="975" alt="Task 2 8 2" src="https://github.com/user-attachments/assets/4da0175b-09a3-4a0b-ac0e-9c06cd152e2e">>)
+
+</details>
 
    
 Task 3: Data model changes & UI alterations.
