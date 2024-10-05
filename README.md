@@ -4,6 +4,15 @@ Task 1: User Interface changes
 
 <img width="540" alt="Original Contact web UI  2" src="https://github.com/user-attachments/assets/572f599c-7673-4664-92d9-b32046d275cb">
 
+![Task1 1](https://github.com/user-attachments/assets/d77e0d68-41ff-49dd-a45d-126971f5159d)
+
+![Task 1 2](https://github.com/user-attachments/assets/6d932002-e3a3-40ab-a982-05da938b8110)
+
+![Task 1 2 Button](https://github.com/user-attachments/assets/74e52ea2-3a88-40a0-a0ae-21c5e365f53a)
+
+![Task 1 3](https://github.com/user-attachments/assets/f03cf686-50bf-4127-a910-8d1eeb0c8624)
+
+
 Task 2: API Commands
 1. Show the API command for “Show Contact” and provide a screenshot of the output (1 Mark)
 
