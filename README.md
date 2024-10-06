@@ -124,7 +124,32 @@ Code changes:
 
 </details>
 
+<details>
+  <summary> Task 4: Company table creation & API commands</summary>
+1. Create company:
+  
+![Task 4 Create company](https://github.com/user-attachments/assets/7c0e5e2a-5efa-4648-b972-6da6cf91c5cf)
 
+2. Get company list:
+![Task 4 get company](https://github.com/user-attachments/assets/2b7330de-dad6-41d2-b590-db69410fedc5)
+
+3. Update company:
+   
+![Task 4 Update company](https://github.com/user-attachments/assets/fcfa6d48-1e1a-44ee-b5f3-27f0df2a40be)
+
+4. Delete company:
+
+![Task 4 Delete company](https://github.com/user-attachments/assets/7c3e49c1-40e0-4b01-9cac-39e818480bd6)
+
+Task 4: Code changes ( Create a new file for "Company Controller")
+
+![Task 4 Company table creation ](https://github.com/user-attachments/assets/dc6af835-2e68-4d90-8458-f9650395b6e0)
+
+![Task 4 create sequelize databse ](https://github.com/user-attachments/assets/4837d13b-1751-4bbc-97fa-d2ba7c147de4)
+
+![Task 4 company API routes](https://github.com/user-attachments/assets/1439e0bb-2300-455b-a7da-d77efadd2361)
+
+</details>
 
 
 
