@@ -21,37 +21,37 @@ Task 1 UI changes:
 
 <details>
   <summary>Task 2: API Commands and Screenshots</summary>
-1. Show the API command for “Show Contact” and provide a screenshot of the output (1 Mark)
-
-   ![](<<img width="967" alt="Task 2 1 2" src="https://github.com/user-attachments/assets/96bf5aa8-4421-4bda-a895-425af18ab2bf">>)
-   
-2. Show the API command for “Add Contact” and provide a screenshot of the output (1 Mark)
-
-  ![](<<img width="968" alt="Task 2 2 2" src="https://github.com/user-attachments/assets/5e12d46c-d422-468a-85b6-8b5c6f2db82d">)
+1.Show Contact
   
-3. Show the API command for “Delete Contact” and provide a screenshot of the output (1 Marks)
+  <img width="967" alt="Task 2 1 2" src="https://github.com/user-attachments/assets/07edf718-2348-4de0-a759-33a9a1c5f9d4">
+  
+2. Add Contact
 
-   ![](<<img width="968" alt="Task 2 3 2" src="https://github.com/user-attachments/assets/4a246cc8-d21d-4388-828a-8e07e83328c1">>)
+  <img width="968" alt="Task 2 2 2" src="https://github.com/user-attachments/assets/ea7b6358-cc3a-4692-8622-ead9b236ce00">
+
+3. Delete Contact
    
-4. Show the API command for “Update Contact” and provide a screenshot of the output (1 Marks)
+  <img width="968" alt="Task 2 3 2" src="https://github.com/user-attachments/assets/9bcc1498-6373-4a7e-b24c-f8fab17ca823">
+ 
+4. Update Contact
 
-   ![] (<<img width="970" alt="Task 2 4 2" src="https://github.com/user-attachments/assets/3b32515c-0522-410a-9591-69515148e5d5">>)
+ <img width="970" alt="Task 2 4 2" src="https://github.com/user-attachments/assets/119c6153-1b18-427f-8808-19d773d4ee89">
+
+5.Show Phone
    
-5. Show the API command for “Show Phone” and provide a screenshot of the output (1 Mark)
+<img width="959" alt="Task 2 5 2" src="https://github.com/user-attachments/assets/ebebe615-3d12-41ca-adc9-de7843053912">
 
-   ![Alt text](<<img width="959" alt="Task 2 5 2" src="https://github.com/user-attachments/assets/cc646f42-6e95-433c-a0ad-6e2c83df9410">>)
+6. Add Phone
    
-6. Show the API command for “Add Phone” and provide a screenshot of the output (1 Marks)
-
-   ![Alt text](<<img width="969" alt="Task 2 6 2" src="https://github.com/user-attachments/assets/48cddad2-745c-4176-81c6-8bbbafe14fae">>)
+  <img width="969" alt="Task 2 6 2" src="https://github.com/user-attachments/assets/ac9f04d0-fb84-4bcd-9e5e-0834896a5cdd">
+  
+7. Delete Phone
    
-7. Show the API command for “Delete Phone” and provide a screenshot of the output (1 Marks)
+  <img width="964" alt="Task 2 7 2" src="https://github.com/user-attachments/assets/c4f4245d-047b-4f82-a855-11fab141ca24">
 
-   ![Alt text](<<img width="964" alt="Task 2 7 2" src="https://github.com/user-attachments/assets/96a1a8e5-2dc8-4a92-a6d7-610d8077756a">>)
-   
-8. Show the API command for “Update Phone” and provide a screenshot of the output (1 Marks)
+8. Update Phone
 
-   ![Alt text](<<img width="975" alt="Task 2 8 2" src="https://github.com/user-attachments/assets/4da0175b-09a3-4a0b-ac0e-9c06cd152e2e">>)
+<img width="975" alt="Task 2 8 2" src="https://github.com/user-attachments/assets/5f23b9a2-53b1-420f-8a03-699f5364c87b">
 
 </details>
 
