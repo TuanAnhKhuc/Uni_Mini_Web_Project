@@ -86,24 +86,19 @@ exports.delete = (req, res) => {
         where: { company_id: id }
     })
     .then(num => {
-        Company.destroy({
-            where: { company_id: id }
-        })
-        .then(num => {
-            if (num == 1) {
-                res.send({
-                    message: "Company was deleted successfully!"
-                });
-            } else {
-                res.send({
-                    message: `Cannot delete Company`
-                });
-            }
-        })
-        .catch(err => {
-            res.status(500).send({
-                message: "Could not delete Company with id=" + id
+        if (num === 1) {
+            res.send({
+                message: "Company was deleted successfully!"
             });
+        } else {
+            res.send({
+                message: `Cannot delete Company with id=${id}. It may not exist.`
+            });
+        }
+    })
+    .catch(err => {
+        res.status(500).send({
+            message: "Could not delete Company with id=" + id
         });
     });
 };
