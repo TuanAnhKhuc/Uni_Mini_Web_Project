@@ -1,6 +1,7 @@
 Tuan Anh Github repo link: https://github.com/TuanAnhKhuc/A2-Tuan-Anh-21794174.git
 <details>
 <summary>Task 1: User Interface changes </summary>
+  
 Original UI:
   
 <img width="540" alt="Original Contact web UI  2" src="https://github.com/user-attachments/assets/572f599c-7673-4664-92d9-b32046d275cb">
