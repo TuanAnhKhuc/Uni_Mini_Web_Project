@@ -5,11 +5,19 @@ Original UI:
   
 <img width="540" alt="Original Contact web UI  2" src="https://github.com/user-attachments/assets/572f599c-7673-4664-92d9-b32046d275cb">
 
+1. Changinng the button label of Contact component can easily be done by changing the existing text of the button from "Delete" to "Delete Contact" 
+
 ![Task1 1](https://github.com/user-attachments/assets/d77e0d68-41ff-49dd-a45d-126971f5159d)
+
+3. Using <select></select> can help us create a drop-down menu for different categories of phones 
 
 ![Task 1 2](https://github.com/user-attachments/assets/6d932002-e3a3-40ab-a982-05da938b8110)
 
+2. The "Add" button can be changed using {props.contact.name} so that you can pass the newly added contact name into the text of the button; we also changed the label of the button with the ending " 's phone ".
+
 ![Task 1 2 Button](https://github.com/user-attachments/assets/74e52ea2-3a88-40a0-a0ae-21c5e365f53a)
+
+4. The name of the PhoneList table can easily be changed from "Name" to "Phone Type" by altering the element in the <tr></tr> 
 
 ![Task 1 3](https://github.com/user-attachments/assets/f03cf686-50bf-4127-a910-8d1eeb0c8624)
 
@@ -63,15 +71,25 @@ UI changes:
 
 Code changes:
 
+Modifying the Contacts table: We only need to add the "address" attribute to the Contacts.model.js
+
 ![Task 3 Contact address attri](https://github.com/user-attachments/assets/deffbc2e-db40-4e5c-84ab-e9254c6619d3)
+
+Modifying the Phones table: Change the naming of the existing phone attribute from name & number to phone_type & phone_number respectively.
 
 ![Task 3 Phone atri](https://github.com/user-attachments/assets/d3985eb6-6a33-4127-b2d1-f1ddba165fb3)
 
+By changing sequelize.sync({force:false}) to {force:true} will make sure any changes made to the table models is reflected in the database.
+
 ![Task 3 model changes](https://github.com/user-attachments/assets/57c7b1ed-a532-4686-b411-cc862f78c336)
+
+Next, we have to update the respective controller of each component to make sure that it reference the correct property from the body.
 
 ![Task 3 phone controller](https://github.com/user-attachments/assets/8a832a41-3478-4e06-80cf-bd678c3aeccc)
 
 ![Task 3 Contact controller](https://github.com/user-attachments/assets/736766db-85d1-4c2e-98d5-f9d71b6ad012)
+
+After the changes we made to the table models, we have to make sure that the variables in the frontend reflectes these changes as well to that it can pass the data.
 
 ![Task 3 new contact frontend](https://github.com/user-attachments/assets/3948ae3a-a814-459b-a69b-1a23b528c3e7)
 
@@ -126,6 +144,7 @@ Code changes:
 
 <details>
   <summary> Task 4: Company table creation & API commands</summary>
+Task 4: API Commands:
 1. Create company:
   
 ![Task 4 Create company](https://github.com/user-attachments/assets/7c0e5e2a-5efa-4648-b972-6da6cf91c5cf)
@@ -144,9 +163,24 @@ Code changes:
 
 Task 4: Code changes ( Create a new file for "Company Controller")
 
+Created a new Sequelize model for Company with fields:
+company_id: Primary key, auto-incrementing integer.
+company_name: String to store the name of the company.
+company_address: String to store the company's address.
+contact_id: Integer referencing the contact table.
+
 ![Task 4 Company table creation ](https://github.com/user-attachments/assets/dc6af835-2e68-4d90-8458-f9650395b6e0)
 
+Imported the Company model in the main database file (db.company).
+
 ![Task 4 create sequelize databse ](https://github.com/user-attachments/assets/4837d13b-1751-4bbc-97fa-d2ba7c147de4)
+
+Added routes for company operations:
+POST /companies: Creates a new company.
+GET /companies: Retrieves all companies.
+GET /companies/:companyId: Retrieves a specific company by ID.
+PUT /companies/:companyId: Updates a specific company.
+DELETE /companies/:companyId: Deletes a specific company.
 
 ![Task 4 company API routes](https://github.com/user-attachments/assets/1439e0bb-2300-455b-a7da-d77efadd2361)
 
