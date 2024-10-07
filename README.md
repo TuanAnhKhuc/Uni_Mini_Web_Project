@@ -69,21 +69,26 @@ UI changes:
 
 <img width="461" alt="Task 3 UI" src="https://github.com/user-attachments/assets/675dbac6-0ddf-4321-8be7-0ded719e1147">
 
+Added an "Address" field to the "Contacts" form for creating a contact.
+
+Updated UI to display the address in the contact list.
+
 Code changes:
 
-Modifying the Contacts table: We only need to add the "address" attribute to the Contacts.model.js
+Added the "address" attribute to the Contacts.model.js.
 
 ![Task 3 Contact address attri](https://github.com/user-attachments/assets/deffbc2e-db40-4e5c-84ab-e9254c6619d3)
 
-Modifying the Phones table: Change the naming of the existing phone attribute from name & number to phone_type & phone_number respectively.
+Renamed the "name" and "number" attributes to "phone_type" and "phone_number" respectively in Phones.model.js.
 
 ![Task 3 Phone atri](https://github.com/user-attachments/assets/d3985eb6-6a33-4127-b2d1-f1ddba165fb3)
 
-By changing sequelize.sync({force:false}) to {force:true} will make sure any changes made to the table models is reflected in the database.
+Changed sequelize.sync from { force: false } to { force: true } to reflect model changes in the database.
 
 ![Task 3 model changes](https://github.com/user-attachments/assets/57c7b1ed-a532-4686-b411-cc862f78c336)
 
-Next, we have to update the respective controller of each component to make sure that it reference the correct property from the body.
+Updated the contacts controller to handle the new "address" attribute.
+Modified the phones controller to reference phone_type and phone_number instead of name and number.
 
 ![Task 3 phone controller](https://github.com/user-attachments/assets/8a832a41-3478-4e06-80cf-bd678c3aeccc)
 
@@ -91,13 +96,25 @@ Next, we have to update the respective controller of each component to make sure
 
 After the changes we made to the table models, we have to make sure that the variables in the frontend reflectes these changes as well to that it can pass the data.
 
+Added a new state variable for address using useState.
+
+Modified the form to include an input field for the address, with its onChange event handler linked to setAddress.
+
 ![Task 3 new contact frontend](https://github.com/user-attachments/assets/3948ae3a-a814-459b-a69b-1a23b528c3e7)
+
+Modified the component rendering the contact list to display the address field.
 
 ![Task 3 contact frontend](https://github.com/user-attachments/assets/d72d8904-f433-4338-9b3d-b7b685111950)
 
+Changed state management for phone details to use phone_type and phone_number instead of name and number.
+
 ![Task 3 frontend Phone ](https://github.com/user-attachments/assets/1c749477-a089-453b-aa94-8862b846605a)
 
+Updated the input field placeholder to "Phone Number" and the onChange event to use setPhoneNumber.
+
 ![Task 3 NewPhone frnt end part1](https://github.com/user-attachments/assets/f3c8d4f2-bd8b-488d-a0ba-99713bf7e396)
+
+Adjusted the request payload to include phone_type and phone_number when adding a new phone.
 
 ![Task 3 frontend NewPhone part 3](https://github.com/user-attachments/assets/bc53929d-94f8-4b8c-bf00-b7e5526bff1f)
 
