@@ -505,9 +505,8 @@ function CompanyList({ companies, setCompanies, contacts }) {
 export default CompanyList;
 
 ```
-## Code Overview
 
-### `NewCompany` Component
+### 3. `NewCompany` Component
 
 The `NewCompany` component provides a form to create a new company. It manages input states for company details and sends a `POST` request to the server when the form is submitted.
 
@@ -590,8 +589,9 @@ import CompanyList from './components/CompanyList';
 ```
 
 Adding the Company Table to the Main Page:
-
+ 
 ```javascript
+
  <div className='page'>
             <h1>Contactor</h1>
             <ContactList contacts={contacts} setContacts={setContacts} />
@@ -605,8 +605,9 @@ Adding the Company Table to the Main Page:
             <Stats />
    </div>
     );
-
 ```
+
+
 </details>
 
 
