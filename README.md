@@ -10,7 +10,7 @@ Original UI:
 
 ![Task1 1](https://github.com/user-attachments/assets/d77e0d68-41ff-49dd-a45d-126971f5159d)
 
-3. Using <select></select> can help us create a drop-down menu for different categories of phones 
+3. Using ``<select></select> `` can help us create a drop-down menu for different categories of phones 
 
 ![Task 1 2](https://github.com/user-attachments/assets/6d932002-e3a3-40ab-a982-05da938b8110)
 
@@ -18,7 +18,7 @@ Original UI:
 
 ![Task 1 2 Button](https://github.com/user-attachments/assets/74e52ea2-3a88-40a0-a0ae-21c5e365f53a)
 
-4. The name of the PhoneList table can easily be changed from "Name" to "Phone Type" by altering the element in the <tr></tr> 
+4. The name of the PhoneList table can easily be changed from "Name" to "Phone Type" by altering the element in the `` <tr></tr> ``
 
 ![Task 1 3](https://github.com/user-attachments/assets/f03cf686-50bf-4127-a910-8d1eeb0c8624)
 
