@@ -606,7 +606,47 @@ Adding the Company Table to the Main Page:
    </div>
     );
 ```
+### Adding styling to the Company component in App.css:
 
+```javascript
+/* Styling for the New Company Form */
+.new-company {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Adjust input fields and button width */
+.new-company > input {
+    padding: 8px;
+    border: 1px solid #b1b1b1;
+    border-radius: 4px;
+    width: 100%; /* Make inputs responsive */
+}
+
+.new-company > button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Adjust table width to fit within the container */
+.company-list > table {
+    width: 100%; /* Make table take up the full width of the container */
+}
+
+.contact-list > table {
+    width: 100%; /* Make contact table take up the full width of the container */
+}
+
+/* Optional: Adjust the heading styles */
+.contact-list > h2, .company-list > h2 {
+    text-align: center;
+}
+```
 
 </details>
 
