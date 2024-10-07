@@ -164,9 +164,13 @@ Task 4: API Commands:
 Task 4: Code changes ( Create a new file for "Company Controller")
 
 Created a new Sequelize model for Company with fields:
+
 company_id: Primary key, auto-incrementing integer.
+
 company_name: String to store the name of the company.
+
 company_address: String to store the company's address.
+
 contact_id: Integer referencing the contact table.
 
 ![Task 4 Company table creation ](https://github.com/user-attachments/assets/dc6af835-2e68-4d90-8458-f9650395b6e0)
@@ -176,10 +180,15 @@ Imported the Company model in the main database file (db.company).
 ![Task 4 create sequelize databse ](https://github.com/user-attachments/assets/4837d13b-1751-4bbc-97fa-d2ba7c147de4)
 
 Added routes for company operations:
+
 POST /companies: Creates a new company.
+
 GET /companies: Retrieves all companies.
+
 GET /companies/:companyId: Retrieves a specific company by ID.
+
 PUT /companies/:companyId: Updates a specific company.
+
 DELETE /companies/:companyId: Deletes a specific company.
 
 ![Task 4 company API routes](https://github.com/user-attachments/assets/1439e0bb-2300-455b-a7da-d77efadd2361)
