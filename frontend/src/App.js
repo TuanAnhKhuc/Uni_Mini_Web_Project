@@ -30,12 +30,13 @@ function App() {
         <div className='page'>
             <h1>Contactor</h1>
             <ContactList contacts={contacts} setContacts={setContacts} />
-            <p>Click a contact to view associated phone numbers</p>
+            {/* <p>Click a contact to view associated phone numbers</p> */}
 
-            <h2>Company</h2>
+            {/* <h2>Company</h2>  */}
             <CompanyList companies={companies} setCompanies={setCompanies} contacts={contacts} /> {/* Pass contacts */}
 
-            
+            <p>Click a contact to view associated phone numbers</p> 
+
             <Stats />
         </div>
     );
