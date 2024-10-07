@@ -180,6 +180,141 @@ Task 4: API Commands:
 
 Task 4: Code changes ( Create a new file for "Company Controller")
 
+## Company Controller
+
+Create a Company: This endpoint creates a new company in the database using data provided in the request body.
+
+Retrieve All Companies: This endpoint fetches all companies stored in the database.
+
+Retrieve a Single Company by ID: This endpoint finds a specific company using the company ID from the request parameters.
+
+Update a Company by ID: This endpoint updates the company’s details using the ID and new data from the request.
+
+Delete a Company by ID: This endpoint deletes a company based on the ID provided in the request parameters.
+
+
+### Code Overview
+
+Below is the code for `company.controller.js` along with a brief explanation of each function.
+
+```javascript
+const db = require("../models");
+const Company = db.company; // Import the Company model
+const Contacts = db.contacts; // Import the Contacts model (not used in this file but left for context)
+const Phones = db.phones; // Import the Phones model (not used in this file but left for context)
+const Op = db.Sequelize.Op; // Sequelize operators for complex queries (not used in this file but left for context)
+
+// **Create a Company**
+// This function creates a new company record in the database using data provided in the request body.
+exports.create = (req, res) => {
+    const company = {
+        company_name: req.body.company_name,
+        company_address: req.body.company_address,
+        contact_id: req.body.contact_id
+    };
+
+    Company.create(company)
+        .then(data => {
+            res.send(data);
+        })
+        .catch(err => {
+            res.status(500).send({
+                message: err.message || "Some error occurred while creating the company."
+            });
+        });
+};
+
+// **Retrieve All Companies**
+// This function retrieves all companies from the database.
+exports.findAll = (req, res) => {
+    Company.findAll()
+        .then(data => {
+            res.send(data);
+        })
+        .catch(err => {
+            res.status(500).send({
+                message: err.message || "Some error occurred while retrieving companies."
+            });
+        });
+};
+
+// **Retrieve a Single Company by ID**
+// This function retrieves a company based on the company ID provided in the request parameters.
+exports.findOne = (req, res) => {
+    const id = req.params.companyId;
+
+    Company.findByPk(id)
+        .then(data => {
+            if (data) {
+                res.send(data);
+            } else {
+                res.status(404).send({
+                    message: `Company with ID=${id} not found.`
+                });
+            }
+        })
+        .catch(err => {
+            res.status(500).send({
+                message: "Error retrieving Company with ID=" + id
+            });
+        });
+};
+
+// **Update a Company by ID**
+// This function updates a company's details using the company ID and new data provided in the request body.
+exports.update = (req, res) => {
+    const id = req.params.companyId;
+
+    Company.update(req.body, {
+        where: { company_id: id }
+    })
+    .then(num => {
+        if (num == 1) {
+            res.send({
+                message: "Company was updated successfully."
+            });
+        } else {
+            res.status(404).send({
+                message: `Cannot update Company with ID=${id}. Maybe Company was not found or request body is empty.`
+            });
+        }
+    })
+    .catch(err => {
+        res.status(500).send({
+            message: "Error updating Company with ID=" + id
+        });
+    });
+};
+
+// **Delete a Company by ID**
+// This function deletes a company based on the company ID provided in the request parameters.
+exports.delete = (req, res) => {
+    const id = parseInt(req.params.companyId);
+
+    Company.destroy({
+        where: { company_id: id }
+    })
+    .then(num => {
+        if (num === 1) {
+            res.send({
+                message: "Company was deleted successfully!"
+            });
+        } else {
+            res.status(404).send({
+                message: `Cannot delete Company with ID=${id}. It may not exist.`
+            });
+        }
+    })
+    .catch(err => {
+        res.status(500).send({
+            message: "Could not delete Company with ID=" + id
+        });
+    });
+};
+
+```
+
+
 Created a new Sequelize model for Company with fields:
 
 company_id: Primary key, auto-incrementing integer.
@@ -210,6 +345,268 @@ DELETE /companies/:companyId: Deletes a specific company.
 
 ![Task 4 company API routes](https://github.com/user-attachments/assets/1439e0bb-2300-455b-a7da-d77efadd2361)
 
+</details>
+
+<details>
+  <summary>Task 5: UI changes </summary>
+  
+  <img width="724" alt="Task 5 UI " src="https://github.com/user-attachments/assets/b9b0c7ef-8202-4b5c-8dc1-660ba335f6d3">
+
+# Company Management Frontend
+
+This section provides an overview of the React components used to manage company records. The components include:
+
+1. **`Company` Component**: Handles the display, editing, and deletion of individual company records.
+2. **`CompanyList` Component**: Displays a list of companies and includes an interface for adding new companies.
+3. **`NewCompany` Component**: Provides a form to create a new company.
+
+## Code Overview
+
+### 1. `Company` Component
+
+This component is responsible for displaying a company's details and providing functionalities to edit or delete the company. It uses React's `useState` hook to manage editing state and form values.
+
+#### Code Snippet:
+```javascript
+  import { useState } from 'react'
+  
+function Company({ company, companies, setCompanies, contacts }) {
+    const [isEditing, setIsEditing] = useState(false);
+    const [companyName, setCompanyName] = useState(company.company_name);
+    const [companyAddress, setCompanyAddress] = useState(company.company_address);
+    const [contactId, setContactId] = useState(company.contact_id);
+
+    // Function to handle deletion of a company
+    async function deleteCompany() {
+        const response = await fetch(`http://localhost/api/companies/${company.company_id}`, {
+            method: 'DELETE',
+        });
+
+        if (response.ok) {
+            setCompanies(companies.filter((c) => c.company_id !== company.company_id));
+        } else {
+            console.error('Failed to delete the company');
+        }
+    }
+
+    // Function to handle updating a company
+    async function updateCompany(e) {
+        e.preventDefault();
+
+        const response = await fetch(`http://localhost/api/companies/${company.company_id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                company_name: companyName,
+                company_address: companyAddress,
+                contact_id: contactId,
+            }),
+        });
+
+        if (response.ok) {
+            setCompanies(companies.map((c) => 
+                c.company_id === company.company_id ? { ...c, company_name: companyName, company_address: companyAddress, contact_id: contactId } : c
+            ));
+            setIsEditing(false);
+        } else {
+            console.error('Failed to update the company');
+        }
+    }
+
+    return (
+        <>
+            {isEditing ? (
+                <>
+                    <form onSubmit={updateCompany} style={{ display: 'inline' }}>
+                        <input
+                            type='text'
+                            value={companyName}
+                            onChange={(e) => setCompanyName(e.target.value)}
+                        />
+                        <input
+                            type='text'
+                            value={companyAddress}
+                            onChange={(e) => setCompanyAddress(e.target.value)}
+                        />
+                        <input
+                            type='text'
+                            value={contactId}
+                            onChange={(e) => setContactId(e.target.value)}
+                        />
+                        <button className='button green' type='submit'>Save</button>
+                        <button className='button gray' onClick={() => setIsEditing(false)}>Cancel</button>
+                    </form>
+                </>
+            ) : (
+                <>
+                    <button  onClick={() => setIsEditing(true)}>Edit</button>
+                    <button className='button red' onClick={deleteCompany}>Delete</button>
+                </>
+            )}
+        </>
+    );
+}
+
+export default Company;
+
+```
+### 2. `CompanyList` Component
+
+The `CompanyList` component is responsible for displaying all companies in a table format. It also includes the `NewCompany` component to provide a form for adding new companies and utilizes the `Company` component for managing individual company actions (edit and delete).
+
+#### Code Snippet:
+```javascript
+import Company from './Company';
+import NewCompany from './NewCompany';
+
+function CompanyList({ companies, setCompanies, contacts }) {
+    // Helper function to get contact name using contact_id
+    const getContactName = (contactId) => {
+        const contact = contacts.find((c) => c.id === contactId);
+        return contact ? contact.name : 'Unknown';
+    };
+
+    return (
+        <div className='company-list'>
+            <h2>Companies</h2>
+            <NewCompany companies={companies} setCompanies={setCompanies} />
+
+            <hr />
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Company Name</th>
+                        <th>Company Address</th>
+                        <th>Contact Name</th> {/* Display contact name */}
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {companies.map((company) => (
+                        <tr key={company.company_id}>
+                            <td>{company.company_name}</td>
+                            <td>{company.company_address}</td>
+                            <td>{getContactName(company.contact_id)}</td>
+                            <td>
+                                {/* Use the Company component only for action buttons */}
+                                <Company company={company} companies={companies} setCompanies={setCompanies} contacts={contacts} />
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    );
+}
+
+export default CompanyList;
+
+```
+## Code Overview
+
+### `NewCompany` Component
+
+The `NewCompany` component provides a form to create a new company. It manages input states for company details and sends a `POST` request to the server when the form is submitted.
+
+#### Code Snippet:
+```javascript
+import { useState } from 'react';
+
+function NewCompany({ companies, setCompanies }) {
+    const [companyName, setCompanyName] = useState('');
+    const [companyAddress, setCompanyAddress] = useState('');
+    const [contactId, setContactId] = useState('');
+
+    // Function to handle adding a new company
+    async function createCompany(e) {
+        e.preventDefault();
+
+        const response = await fetch('http://localhost/api/companies', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                company_name: companyName,
+                company_address: companyAddress,
+                contact_id: contactId,
+            }),
+        });
+
+        const data = await response.json();
+
+        if (data.company_id) {
+            setCompanies([...companies, data]);
+        }
+
+        // Clear input fields after submission
+        setCompanyName('');
+        setCompanyAddress('');
+        setContactId('');
+    }
+
+    return (
+        <form onSubmit={createCompany} className='new-company'>
+            <input
+                type='text'
+                placeholder='Company Name'
+                value={companyName}
+                onChange={(e) => setCompanyName(e.target.value)}
+                required
+            />
+            <input
+                type='text'
+                placeholder='Company Address'
+                value={companyAddress}
+                onChange={(e) => setCompanyAddress(e.target.value)}
+                required
+            />
+            <input
+                type='text'
+                placeholder='Contact ID'
+                value={contactId}
+                onChange={(e) => setContactId(e.target.value)}
+                required
+            />
+            <button className='button green ' type='submit'>Add Company</button>
+        </form>
+    );
+}
+
+export default NewCompany;
+```
+## App Component
+
+This section explains how the `CompanyList` component is integrated into the main application, alongside the existing contact management features.
+
+### Integrating the `CompanyList` Component
+
+First, import the `CompanyList` component at the top of the file:
+```javascript
+import CompanyList from './components/CompanyList';
+```
+
+Adding the Company Table to the Main Page:
+
+```javascript
+ <div className='page'>
+            <h1>Contactor</h1>
+            <ContactList contacts={contacts} setContacts={setContacts} />
+            {/* <p>Click a contact to view associated phone numbers</p> */}
+
+            {/* <h2>Company</h2>  */}
+            <CompanyList companies={companies} setCompanies={setCompanies} contacts={contacts} /> {/* Pass contacts */}
+
+            <p>Click a contact to view associated phone numbers</p> 
+
+            <Stats />
+   </div>
+    );
+
+```
 </details>
 
 
